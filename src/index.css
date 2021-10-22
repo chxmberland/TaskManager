@@ -16,47 +16,66 @@ h1 {
     font-size: 22px;
 }
 
+#root {
+    height: 100vh;
+    width: 100vw;
+}
+
 .App {
+    margin: 0px;
+    padding: 0px;
+    height: inherit;
+    width: inherit;
     display: flex;
     justify-content: center;
 }
 
 .calendar {
-    width: 97%;
-    margin: auto;
-    margin-top: 80px;
+    margin-top: 60px;
+    width: 97vw;
+    height: 80vh;
     display: flex;
+    justify-content: center;
 }
 
 .day {
     min-height: 500px;
-    margin: 10px;
+    width: 10.8vw;
+    margin: 0.5vw;
     padding: 12px;   
     background: rgb(236, 236, 236);
     color: black;
     border-radius: 15px;
 }
 
+.day-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+}
+
 .input-form {
     display: flex;
-    margin-bottom: 25px;
-    width: 100%;
+    margin-bottom: 30px;
 }
 
 .text-input {
-    width: calc(100% - 45px);
+    width: calc(100% - 50px);
     border: 0px;
+    padding: 0px;
+    border-bottom: 0.5px solid black;
+    outline: none;
     background: rgb(236, 236, 236);
 }
 
 .add-item-btn {
+    height: 32px;
+    width: 32px;
     margin-left: 13px;
     font-size: 18px;
     border-radius: 100%;
     border: 0px;
     background: rgb(218, 202, 255);
-    height: 32px;
-    width: 32px;
     box-shadow: 3px 5px 8px #b3b3b3;
     transition: 0.3s;
 }
@@ -71,15 +90,14 @@ h1 {
 
 .task-container {
     display: flex;
-    height: 25px;
+    width: 100%;
+    padding: 0px;
+    min-height: 25px;
     margin-top: 5px;
     margin-bottom: 13px;
+    border-radius: 5px;
     background: rgb(255, 255, 255);
     box-shadow: 3px 5px 8px #d3d3d3;
-    border-radius: 5px;
-    padding: 0px;
-    max-width: 100%;
-
     position: relative;
     top: 0;
     transition: ease-in 0.1s;
@@ -93,12 +111,16 @@ h1 {
 .task-text-container {
     padding-left: 8px;
     padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-radius: 5px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
     width: calc(100% - 24px);
     font-size: 12px;
-    padding-top: 5px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .task-checked {
@@ -114,7 +136,6 @@ h1 {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     margin: 0px;
-
     transition: 0.3s;
 }
 

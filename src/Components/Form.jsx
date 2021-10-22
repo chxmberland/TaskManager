@@ -76,8 +76,8 @@ const Form = (props) => {
                 { tasks.map(task => (
                     <div className = 'task-container' key = { task.id }>
                         { task.checked 
-                            ? <div className = 'task-text-container task-checked' onClick = { () => toggleChecked(task.id) }>{ task.todo.input.toString() }</div>
-                            : <div className = 'task-text-container'              onClick = { () => toggleChecked(task.id) }>{ task.todo.input.toString() }</div>
+                            ? <p className = 'task-text-container task-checked' onClick = { () => toggleChecked(task.id) }>{ task.todo.input.toString() }</p>
+                            : <p className = 'task-text-container'              onClick = { () => toggleChecked(task.id) }>{ task.todo.input.toString() }</p>
                         }
                         <button className = 'clear-button' onClick = { () => deleteTask(task.id) }>x</button>
                     </div>

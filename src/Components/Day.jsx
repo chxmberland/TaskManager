@@ -5,7 +5,7 @@ const Day = (props) => {
 
     return (
         <div className = 'day'>
-            <h1>{ props.day }</h1>
+            <h1 className = 'day-title'>{ props.day }</h1>
             <Form day = { props.day }/>
         </div>
     )
